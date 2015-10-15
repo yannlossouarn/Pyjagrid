@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Pyjagrid</_name>
+  <id>org.ekips.filter.pyjagrid</id>
+  <dependency type="executable" location="extensions">pyjagrid.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="pyjamaColumns" type="int" min="1" max="30" _gui-text="How many columns on your pyjama ?">16</param>
+  <param name="verticalLines" type="int" min="1" max="30" _gui-text="How many lines on your vertical grid ?">12</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Render"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">pyjagrid.py</command>
+  </script>
+</inkscape-extension>
