@@ -45,8 +45,8 @@ class PyjaGridEffect(inkex.Effect):
         # svg = self.document.xpath('//svg:svg',namespaces=inkex.NSS)[0]
 
         # Again, there are two ways to get the attibutes:
-        width  = inkex.unittouu(svg.get('width'))
-        height = inkex.unittouu(svg.attrib['height'])
+        width  = inkex.Effect.unittouu(self, svg.get('width'))
+        height = inkex.Effect.unittouu(self, svg.attrib['height'])
 
         # Reglages
 
